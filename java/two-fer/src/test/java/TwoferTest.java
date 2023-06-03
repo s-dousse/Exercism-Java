@@ -32,4 +32,16 @@ public class TwoferTest {
         assertThat(twofer.twofer("Bob"))
                 .isEqualTo("One for Bob, one for me.");
     }
+
+    @Test
+    public void aNameGivenAndLikesCookies() {
+        assertThat(twofer.twofer("Liam", true))
+                .isEqualTo("One for Liam, one for me.");
+    }
+
+    @Test
+    public void aNameGivenAndDoesNotLikeCookies() {
+        assertThat(twofer.twofer("Jane", false))
+                .isEqualTo("One for you, one for me.");
+    }
 }
