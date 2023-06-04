@@ -1,6 +1,6 @@
 public class Twofer {
     public String twofer(String name, boolean likesCookies) {
-        String cookieEater = likesCookies && name != null ? name : "you";
+        final String cookieEater = likesCookies && name != null ? name : "you";
         return String.format("One for %s, one for me.", cookieEater );
     }
 
