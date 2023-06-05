@@ -107,7 +107,6 @@ public class AnnalynsInfiltrationTest {
         assertThat(AnnalynsInfiltration.canSignalPrisoner(archerIsAwake, prisonerIsAwake)).isFalse();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void cannot_release_prisoner_if_everyone_is_awake_and_pet_dog_is_present() {
         boolean knightIsAwake = true;
@@ -118,7 +117,6 @@ public class AnnalynsInfiltrationTest {
                    prisonerIsAwake, petDogIsPresent)).isFalse();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void cannot_release_prisoner_if_everyone_is_awake_and_pet_dog_is_absent() {
         boolean knightIsAwake = true;
@@ -129,7 +127,6 @@ public class AnnalynsInfiltrationTest {
                    prisonerIsAwake, petDogIsPresent)).isFalse();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void can_release_prisoner_if_everyone_is_asleep_and_pet_dog_is_present() {
         boolean knightIsAwake = false;
@@ -140,7 +137,6 @@ public class AnnalynsInfiltrationTest {
                    prisonerIsAwake, petDogIsPresent)).isTrue();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void cannot_release_prisoner_if_everyone_is_asleep_and_pet_dog_is_absent() {
         boolean knightIsAwake = false;
@@ -151,7 +147,6 @@ public class AnnalynsInfiltrationTest {
                    prisonerIsAwake, petDogIsPresent)).isFalse();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void can_release_prisoner_if_only_prisoner_is_awake_and_pet_dog_is_present() {
         boolean knightIsAwake = false;
@@ -162,7 +157,6 @@ public class AnnalynsInfiltrationTest {
                    prisonerIsAwake, petDogIsPresent)).isTrue();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void can_release_prisoner_if_only_prisoner_is_awake_and_pet_dog_is_absent() {
         boolean knightIsAwake = false;
@@ -173,7 +167,6 @@ public class AnnalynsInfiltrationTest {
                    prisonerIsAwake, petDogIsPresent)).isTrue();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void cannot_release_prisoner_if_only_archer_is_awake_and_pet_dog_is_present() {
         boolean knightIsAwake = false;
@@ -184,7 +177,6 @@ public class AnnalynsInfiltrationTest {
                    prisonerIsAwake, petDogIsPresent)).isFalse();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void cannot_release_prisoner_if_only_archer_is_awake_and_pet_dog_is_absent() {
         boolean knightIsAwake = false;
@@ -195,7 +187,6 @@ public class AnnalynsInfiltrationTest {
                    prisonerIsAwake, petDogIsPresent)).isFalse();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void can_release_prisoner_if_only_knight_is_awake_and_pet_dog_is_present() {
         boolean knightIsAwake = true;
@@ -206,7 +197,6 @@ public class AnnalynsInfiltrationTest {
                    prisonerIsAwake, petDogIsPresent)).isTrue();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void cannot_release_prisoner_if_only_knight_is_awake_and_pet_dog_is_absent() {
         boolean knightIsAwake = true;
@@ -217,7 +207,6 @@ public class AnnalynsInfiltrationTest {
                    prisonerIsAwake, petDogIsPresent)).isFalse();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void cannot_release_prisoner_if_only_knight_is_asleep_and_pet_dog_is_present() {
         boolean knightIsAwake = false;
@@ -228,7 +217,6 @@ public class AnnalynsInfiltrationTest {
                    prisonerIsAwake, petDogIsPresent)).isFalse();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void cannot_release_prisoner_if_only_knight_is_asleep_and_pet_dog_is_absent() {
         boolean knightIsAwake = false;
@@ -239,7 +227,6 @@ public class AnnalynsInfiltrationTest {
                    prisonerIsAwake, petDogIsPresent)).isFalse();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void can_release_prisoner_if_only_archer_is_asleep_and_pet_dog_is_present() {
         boolean knightIsAwake = true;
@@ -250,7 +237,6 @@ public class AnnalynsInfiltrationTest {
                    prisonerIsAwake, petDogIsPresent)).isTrue();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void cannot_release_prisoner_if_only_archer_is_asleep_and_pet_dog_is_absent() {
         boolean knightIsAwake = true;
@@ -261,7 +247,6 @@ public class AnnalynsInfiltrationTest {
                    prisonerIsAwake, petDogIsPresent)).isFalse();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void cannot_release_prisoner_if_only_prisoner_is_asleep_and_pet_dog_is_present() {
         boolean knightIsAwake = true;
@@ -272,7 +257,6 @@ public class AnnalynsInfiltrationTest {
                    prisonerIsAwake, petDogIsPresent)).isFalse();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void cannot_release_prisoner_if_only_prisoner_is_asleep_and_pet_dog_is_absent() {
         boolean knightIsAwake = true;
