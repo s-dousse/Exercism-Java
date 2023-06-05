@@ -14,7 +14,7 @@ public class AnnalynsInfiltrationTest {
         boolean knightIsAwake = false;
         assertThat(AnnalynsInfiltration.canFastAttack(knightIsAwake)).isTrue();
     }
-    @Ignore("Remove to run test")
+
     @Test
     public void cannot_spy_if_everyone_is_sleeping() {
         boolean knightIsAwake = false;
@@ -23,7 +23,6 @@ public class AnnalynsInfiltrationTest {
         assertThat(AnnalynsInfiltration.canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake)).isFalse();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void can_spy_if_everyone_but_knight_is_sleeping() {
         boolean knightIsAwake = true;
@@ -32,7 +31,6 @@ public class AnnalynsInfiltrationTest {
         assertThat(AnnalynsInfiltration.canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake)).isTrue();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void can_spy_if_everyone_but_archer_is_sleeping() {
         boolean knightIsAwake = false;
@@ -41,7 +39,6 @@ public class AnnalynsInfiltrationTest {
         assertThat(AnnalynsInfiltration.canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake)).isTrue();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void can_spy_if_everyone_but_prisoner_is_sleeping() {
         boolean knightIsAwake = false;
@@ -50,7 +47,6 @@ public class AnnalynsInfiltrationTest {
         assertThat(AnnalynsInfiltration.canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake)).isTrue();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void can_spy_if_only_knight_is_sleeping() {
         boolean knightIsAwake = false;
@@ -59,7 +55,6 @@ public class AnnalynsInfiltrationTest {
         assertThat(AnnalynsInfiltration.canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake)).isTrue();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void can_spy_if_only_archer_is_sleeping() {
         boolean knightIsAwake = true;
@@ -68,7 +63,6 @@ public class AnnalynsInfiltrationTest {
         assertThat(AnnalynsInfiltration.canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake)).isTrue();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void can_spy_if_only_prisoner_is_sleeping() {
         boolean knightIsAwake = true;
@@ -77,7 +71,6 @@ public class AnnalynsInfiltrationTest {
         assertThat(AnnalynsInfiltration.canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake)).isTrue();
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void can_spy_if_everyone_is_awake() {
         boolean knightIsAwake = true;
