@@ -5,11 +5,7 @@ class AnnalynsInfiltration {
     }
 
     public static boolean canSpy(boolean knightIsAwake, boolean archerIsAwake, boolean prisonerIsAwake) {
-        boolean[] groupAwaknessLevels = {knightIsAwake, archerIsAwake, prisonerIsAwake};
-        for(boolean indivitualAwaknessLevel : groupAwaknessLevels){
-            if(indivitualAwaknessLevel){ return true;}
-        }
-        return false;
+        return knightIsAwake || archerIsAwake || prisonerIsAwake;
     }
 
     public static boolean canSignalPrisoner(boolean archerIsAwake, boolean prisonerIsAwake) {
@@ -17,10 +13,6 @@ class AnnalynsInfiltration {
     }
 
     public static boolean canFreePrisoner(boolean knightIsAwake, boolean archerIsAwake, boolean prisonerIsAwake, boolean petDogIsPresent) {
-        if (petDogIsPresent) {
-            return !archerIsAwake;
-        } else {
-            return !knightIsAwake && !archerIsAwake &&  prisonerIsAwake;
-        }
+        return (!knightIsAwake && !archerIsAwake && prisonerIsAwake) || (!archerIsAwake && petDogIsPresent);
     }
 }
