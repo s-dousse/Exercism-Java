@@ -13,16 +13,14 @@ class AnnalynsInfiltration {
     }
 
     public static boolean canSignalPrisoner(boolean archerIsAwake, boolean prisonerIsAwake) {
-       if (prisonerIsAwake && !archerIsAwake) { return true; }
-       return false;
+       return prisonerIsAwake && !archerIsAwake;
     }
 
     public static boolean canFreePrisoner(boolean knightIsAwake, boolean archerIsAwake, boolean prisonerIsAwake, boolean petDogIsPresent) {
         if (petDogIsPresent) {
-            if (!archerIsAwake) { return true; }
+            return !archerIsAwake;
         } else {
-            if (!knightIsAwake && !archerIsAwake) { return true; }
+            return !knightIsAwake && !archerIsAwake &&  prisonerIsAwake;
         }
-        return false;
     }
 }
