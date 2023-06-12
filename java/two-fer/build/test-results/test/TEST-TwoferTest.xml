@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TwoferTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-06-03T17:31:20" hostname="Sarahs-MacBook-Pro.local" time="0.042">
+  <properties/>
+  <testcase name="noNameGiven" classname="TwoferTest" time="0.04"/>
+  <testcase name="aNameGivenAndDoesNotLikeCookies" classname="TwoferTest" time="0.001"/>
+  <testcase name="aNameGiven" classname="TwoferTest" time="0.0"/>
+  <testcase name="aNameGivenAndLikesCookies" classname="TwoferTest" time="0.0"/>
+  <testcase name="anotherNameGiven" classname="TwoferTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
