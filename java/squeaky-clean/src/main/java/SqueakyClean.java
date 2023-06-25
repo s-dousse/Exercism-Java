@@ -2,21 +2,30 @@ import java.lang.Character;
 
 class SqueakyClean {
     static String clean(String identifier) {
-        String result = "";
+        StringBuilder str = new StringBuilder();
+
         char[] charArr = identifier.toCharArray();
         for(int i = 0; i < charArr.length; i++) {
             if (Character.isSpaceChar(charArr[i])) {
-                result = result + "_";
+                str.append("_");
             } else if (Character.isISOControl(charArr[i])) {
-
-            } else if (charArr[i] == '-') { // remove dashes (skip character) , turn next character to upper case
+                str.append("CTRL");
+            } else if (charArr[i] == '-') {
                 i++;
-                result = result + Character.toUpperCase(charArr[i]);
-            } else if (Character.isletter(charArr[i])) { // remove non Letter character
-                result = result + charArr[i];
+                if (Character.isLetter(charArr[i])) {
+                    str.append(Character.toUpperCase(charArr[i]));
+                } else if (Character.isDigit(charArr[i])) {
+                    str.append("");
+                } else {
+                    str.append(charArr[i]);
+                }
+            } else if(!Character.isLetter(charArr[i]) || (charArr[i] >= 'α' && charArr[i] <= 'ω')) {
+                str.append("");
+            } else {
+                str.append(charArr[i]);
             }
-            return result;
         }
-        return result;
+
+        return str.toString();
     }
 }
