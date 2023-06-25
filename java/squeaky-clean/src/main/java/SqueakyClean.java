@@ -1,31 +1,24 @@
-import java.lang.Character;
-
 class SqueakyClean {
     static String clean(String identifier) {
-        StringBuilder str = new StringBuilder();
-
-        char[] charArr = identifier.toCharArray();
-        for(int i = 0; i < charArr.length; i++) {
-            if (Character.isSpaceChar(charArr[i])) {
-                str.append("_");
-            } else if (Character.isISOControl(charArr[i])) {
-                str.append("CTRL");
-            } else if (charArr[i] == '-') {
+        StringBuilder cleaned = new StringBuilder();
+        for (int i = 0; i < identifier.length(); i++) {
+            char currentChar = identifier.charAt(i);
+            if (Character.isSpaceChar(currentChar)) {
+                cleaned.append("_");
+            } else if (Character.isISOControl(currentChar)) {
+                cleaned.append("CTRL");
+            } else if (currentChar == '-') {
                 i++;
-                if (Character.isLetter(charArr[i])) {
-                    str.append(Character.toUpperCase(charArr[i]));
-                } else if (Character.isDigit(charArr[i])) {
-                    str.append("");
-                } else {
-                    str.append(charArr[i]);
+                char nextChar = identifier.charAt(i);
+                if (Character.isLetter(nextChar)) {
+                    cleaned.append(Character.toUpperCase(nextChar));
+                } else if (!Character.isDigit(nextChar)) {
+                    cleaned.append(nextChar);
                 }
-            } else if(!Character.isLetter(charArr[i]) || (charArr[i] >= 'α' && charArr[i] <= 'ω')) {
-                str.append("");
-            } else {
-                str.append(charArr[i]);
+            } else if (Character.isLetter(currentChar) && (currentChar < 'α' || currentChar > 'ω')) {
+                cleaned.append(currentChar);
             }
         }
-
-        return str.toString();
+        return cleaned.toString();
     }
 }
