@@ -1,69 +1,62 @@
 public class Blackjack {
+    private final int BLACKJACK = 21;
+    private final String STAND = "S";
+    private final String HIT = "H";
+    private final String SPLIT = "P";
+    private final String WIN = "W";
     public int parseCard(String card) {
-        int parsedCard = 0;
         switch(card) {
             case "ace":
-                parsedCard = 11;
-                break;
+                return 11;
             case "queen":
             case "king":
             case "jack":
             case "ten":
-                parsedCard = 10;
-                break;
+                return 10;
             case "nine":
-                parsedCard = 9;
-                break;
+                return 9;
             case "eight":
-                parsedCard = 8;
-                break;
+                return 8;
             case "seven":
-                parsedCard = 7;
-                break;
+                return 7;
             case "six":
-                parsedCard = 6;
-                break;
+                return 6;
             case "five":
-                parsedCard = 5;
-                break;
+                return 5;
             case "four":
-                parsedCard = 4;
-                break;
+                return 4;
             case "three":
-                parsedCard = 3;
-                break;
+                return 3;
             case "two":
-                parsedCard = 2;
-                break;
-            default :
-                break;
+                return 2;
+            default:
+                return 0;
         }
-        return parsedCard;
     }
     public boolean isBlackjack(String card1, String card2) {
-        return (this.parseCard(card1) + this.parseCard(card2)) == 21;
+        return (this.parseCard(card1) + this.parseCard(card2)) == BLACKJACK;
     }
     public String largeHand(boolean isBlackjack, int dealerScore) {
         if (isBlackjack && !(dealerScore == 11 || dealerScore == 10)) {
-            return "W";
+            return WIN;
         } else {
-            return "S";
+            return STAND;
         }
     }
     public String smallHand(int handScore, int dealerScore) {
         if (handScore >= 17) {
-            return "S";
+            return STAND;
         } else if(handScore <= 11 || dealerScore >= 7) {
-            return "H";
+            return HIT;
         } else {
-            return "S";
+            return STAND;
         }
     }
     // FirstTurn returns the semi-optimal decision for the first turn, given the cards of the player and the dealer.
     // This function is already implemented and does not need to be edited. It pulls the other functions together in a
     // complete decision tree for the first turn.
     public String firstTurn(String card1, String card2, String dealerCard) {
-        if (card1.equals("ace") && card2.equals("ace")) { return "P"; }
+        if (card1.equals("ace") && card2.equals("ace")) { return SPLIT; }
         int handScore = parseCard(card1) + parseCard(card2);
         int dealerScore = parseCard(dealerCard);
         if (20 < handScore) {
