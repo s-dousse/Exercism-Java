@@ -1,0 +1,8 @@
+.idea/*
+.gradle
+.exercism
+build
+build.gradle
+HELP.md
+java/.DS_Store
+HINTS.md
