@@ -1,13 +1,13 @@
 import java.util.*;
 
 class Scrabble {
-    private final String[] onePointLetters = {"A", "I", "E", "O", "U", "L", "N", "R", "S", "T"};
-    private final String[] twoPointsLetters = {"D", "G"};
-    private final String[] threePointsLetters = {"B", "C", "M", "P"};
-    private final String[] fourPointsLetters = {"F", "H", "V", "W", "Y"};
-    private final String[] fivePointsLetters = {"K"};
-    private final String[] eightPointsLetters = {"J", "X"};
-    private final String[] tenPointsLetters = {"Q", "Z"};
+    private final String onePointLetters = "AIEOULNRST";
+    private final String twoPointsLetters = "DG";
+    private final String threePointsLetters = "BCMP";
+    private final String fourPointsLetters = "FHVWY";
+    private final String fivePointsLetters = "K";
+    private final String eightPointsLetters = "JX";
+    private final String tenPointsLetters = "QZ";
 
     String word;
 
@@ -17,33 +17,23 @@ class Scrabble {
 
     int getScore() {
         int score = 0;
-
-        List<String> onePointList = Arrays.asList(onePointLetters);
-        List<String> twoPointsList = Arrays.asList(twoPointsLetters);
-        List<String> threePointsList = Arrays.asList(threePointsLetters);
-        List<String> fourPointsList = Arrays.asList(fourPointsLetters);
-        List<String> fivePointsList = Arrays.asList(fivePointsLetters);
-        List<String> eightPointsList = Arrays.asList(eightPointsLetters);
-        List<String> tenPointsList = Arrays.asList(tenPointsLetters);
-
-        char[] wordArray = word.toCharArray();
-
-        for (int i = 0; i < wordArray.length; i++) {
+        
+        for (int i = 0; i < word.length(); i++) {
             String letter = String.valueOf(word.charAt(i));
 
-            if (onePointList.contains(letter)) {
+            if (onePointLetters.contains(letter)) {
                 score++;
-            } else if (twoPointsList.contains(letter)) {
+            } else if (twoPointsLetters.contains(letter)) {
                 score += 2;
-            } else if (threePointsList.contains(letter)) {
+            } else if (threePointsLetters.contains(letter)) {
                 score += 3;
-            } else if (fourPointsList.contains(letter)) {
+            } else if (fourPointsLetters.contains(letter)) {
                 score += 4;
-            } else if (fivePointsList.contains(letter)) {
+            } else if (fivePointsLetters.contains(letter)) {
                 score += 5;
-            } else if (eightPointsList.contains(letter)) {
+            } else if (eightPointsLetters.contains(letter)) {
                 score += 8;
-            } else if (tenPointsList.contains(letter)) {
+            } else if (tenPointsLetters.contains(letter)) {
                 score += 10;
             }
         }
